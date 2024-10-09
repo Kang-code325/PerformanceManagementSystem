@@ -16,10 +16,10 @@ public class PersonnelSpecialistDao {
         return personnelSpecialist;
     }
 
-    public int addEmployee(String employee_id, String name, String password, String dep, String job) throws SQLException {
+    public int addPersonnelSpecialist(String specialist_id, String name, String password) throws SQLException {
         QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
         String sql = "INSERT INTO personnelspecialist (specialist_id, name, password) VALUES (?, ?, ?)";
-        int rowsAffected = queryRunner.update(sql, employee_id, name, password, dep, job);
+        int rowsAffected = queryRunner.update(sql, specialist_id, name, password);
         return rowsAffected;
     }
 }

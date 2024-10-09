@@ -39,6 +39,7 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>RegisterServlet2</servlet-name>
         <url-pattern>/registerServlet2</url-pattern>
