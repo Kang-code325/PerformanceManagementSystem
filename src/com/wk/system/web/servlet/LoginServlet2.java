@@ -1,7 +1,9 @@
 package com.wk.system.web.servlet;
 
 import com.wk.system.domain.Employee;
+import com.wk.system.domain.PersonnelSpecialist;
 import com.wk.system.service.EmployeeService;
+import com.wk.system.service.PersonnelSpecialistService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,27 +21,27 @@ public class LoginServlet2 extends HttpServlet {
         System.out.println("doPost");
 
         //从请求中获取登录的员工工号和大密码
-        String employee_id = req.getParameter("employee_id");
+        String specialist_id = req.getParameter("specialist_id");
         String password = req.getParameter("password");
 
-        System.out.println(employee_id);
+        System.out.println(specialist_id);
         System.out.println(password);
 
-        EmployeeService employeeService = new EmployeeService();
-        Employee employee = null;
+        PersonnelSpecialistService personnelSpecialistService = new PersonnelSpecialistService();
+        PersonnelSpecialist personnelSpecialist = null;
         try {
-            employee = employeeService.login(employee_id, password);
+            personnelSpecialist = personnelSpecialistService.login(specialist_id, password);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        if (employee == null){
+        if (personnelSpecialist == null){
             resp.getWriter().write("用户名或密码错误");
         }else {
-            resp.getWriter().write(employee.getName()+"登录成功！");
+            resp.getWriter().write(personnelSpecialist.getName()+"登录成功！");
             // 用户名和密码正确，创建 session 并存储用户信息
             HttpSession session = req.getSession();
-            session.setAttribute("employee_id", employee_id);
+            session.setAttribute("specialist_id", specialist_id);
             // 重定向到home页面
             resp.sendRedirect("userHome.html");
         }

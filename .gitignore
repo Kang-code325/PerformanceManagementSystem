@@ -46,3 +46,17 @@ src/c3p0-config.xml
 src/jdbc.properties
 out/production/PerformanceManagementSystem/jdbc.properties
 out/production/PerformanceManagementSystem/com/wk/system/web/servlet/LogoutServlet.class
+.idea/libraries/servlet_api.xml
+.idea/libraries/servlet_api.xml
+.idea/vcs.xml
+out/artifacts/PerformanceManagementSystem_war_exploded/userInfo.html
+out/artifacts/PerformanceManagementSystem_war_exploded/WEB-INF/classes/c3p0-config.xml
+out/artifacts/PerformanceManagementSystem_war_exploded/WEB-INF/classes/com/wk/system/web/servlet/LoginServlet.class
+out/artifacts/PerformanceManagementSystem_war_exploded/WEB-INF/classes/com/wk/system/web/servlet/LogoutServlet.class
+out/artifacts/PerformanceManagementSystem_war_exploded/WEB-INF/classes/jdbc.properties
+out/production/PerformanceManagementSystem/c3p0-config.xml
+out/production/PerformanceManagementSystem/com/wk/system/web/servlet/LoginServlet.class
+out/production/PerformanceManagementSystem/com/wk/system/web/servlet/LogoutServlet.class
+out/production/PerformanceManagementSystem/jdbc.properties
+src/c3p0-config.xml
+src/jdbc.properties
