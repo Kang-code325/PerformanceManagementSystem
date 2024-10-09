@@ -41,3 +41,8 @@ out/artifacts/PerformanceManagementSystem_war_exploded/userInfo.html
 .idea/libraries/servlet_api.xml
 src/jdbc.properties
 *.xml
+src/jdbc.properties
+src/c3p0-config.xml
+src/jdbc.properties
+out/production/PerformanceManagementSystem/jdbc.properties
+out/production/PerformanceManagementSystem/com/wk/system/web/servlet/LogoutServlet.class
