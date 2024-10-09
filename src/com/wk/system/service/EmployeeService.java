@@ -18,4 +18,10 @@ public class EmployeeService {
         return rows;
     }
 
+    public Employee userinfo(String employee_id) throws SQLException {
+        EmployeeDao employeeDao = new EmployeeDao();
+        Employee employee = employeeDao.getEmployeeAll(employee_id);
+        return employee;
+    }
+
 }

@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("employee_id", employee_id);
             // 重定向到home页面
-            resp.sendRedirect("userHome.html");
+            resp.sendRedirect("http://localhost:8080/System_war_exploded/userHome.html");
         }
 
 

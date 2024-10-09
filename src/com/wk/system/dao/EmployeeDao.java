@@ -21,6 +21,12 @@ public class EmployeeDao {
         int rowsAffected = queryRunner.update(sql, employee_id, name, password, dep, job);
         return rowsAffected;
     }
+    public Employee getEmployeeAll(String employee_id) throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select * from employee where employee_id = ?";
+        Employee employee = queryRunner.query(sql, new BeanHandler<>(Employee.class), employee_id);
+        return employee;
+    }
 
 
 }
