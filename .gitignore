@@ -28,3 +28,16 @@ src/jdbc.properties
 web/WEB-INF/lib/servlet-api.jar
 out/artifacts/PerformanceManagementSystem_war_exploded/WEB-INF/classes/jdbc.properties
 .idea/libraries/servlet_api.xml
+.idea/libraries/servlet_api.xml
+.idea/libraries/servlet_api.xml
+.idea/vcs.xml
+src/jdbc.properties
+src/c3p0-config.xml
+out/production/PerformanceManagementSystem/jdbc.properties
+out/production/PerformanceManagementSystem/com/wk/system/web/servlet/LogoutServlet.class
+out/production/PerformanceManagementSystem/com/wk/system/web/servlet/LoginServlet.class
+out/artifacts/PerformanceManagementSystem_war_exploded/userInfo.html
+.idea/vcs.xml
+.idea/libraries/servlet_api.xml
+src/jdbc.properties
+*.xml
