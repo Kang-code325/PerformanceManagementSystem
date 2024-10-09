@@ -27,7 +27,7 @@ public class UserInfoServlet extends HttpServlet {
             Employee  employees = employeeService.userinfo(employee_id);  // 假设获取用户列表
             request.setAttribute("employee", employees);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("userInfo.jsp");  // 转发到 JSP 页面
+            RequestDispatcher dispatcher = request.getRequestDispatcher("userInfo.html");  // 转发到 JSP 页面
             dispatcher.forward(request, response);
 
         } catch (Exception e) {
