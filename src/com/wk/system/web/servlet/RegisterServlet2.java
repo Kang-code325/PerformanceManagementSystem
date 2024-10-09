@@ -27,8 +27,8 @@ public class RegisterServlet2 extends HttpServlet {
         System.out.println(employee_id);
         System.out.println(name);
         System.out.println(password);
-        System.out.println(dep);
-        System.out.println(job);
+//        System.out.println(dep);
+//        System.out.println(job);
 
         EmployeeService employeeService = new EmployeeService();
         int rows = 0;

@@ -17,5 +17,4 @@ public class EmployeeService {
         int rows = employeeDao.addEmployee(employee_id, name,  password, dep, job);
         return rows;
     }
-
 }

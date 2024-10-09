@@ -23,6 +23,7 @@
         <servlet-name>LoginServlet2</servlet-name>
         <url-pattern>/loginServlet2</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.wk.system.web.servlet.RegisterServlet</servlet-class>
