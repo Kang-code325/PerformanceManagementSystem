@@ -5,8 +5,10 @@ import com.wk.system.domain.PersonnelSpecialist;
 import com.wk.system.utils.C3P0Utils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class PersonnelSpecialistDao {
     //管理员数据库操作
@@ -29,5 +31,12 @@ public class PersonnelSpecialistDao {
         PersonnelSpecialist personnelSpecialist = queryRunner.query(sql, new BeanHandler<>(PersonnelSpecialist.class), specialist_id);
         return personnelSpecialist;
     }
+
+    public List<PersonnelSpecialist> getAllPersonnelSpecialists() throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select * from personnelspecialist";
+        return queryRunner.query(sql, new BeanListHandler<>(PersonnelSpecialist.class));
+    }
+
 
 }
