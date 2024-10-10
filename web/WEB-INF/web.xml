@@ -98,6 +98,13 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>UsersInfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UsersInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UsersInfoServlet</servlet-name>
+        <url-pattern>/usersInfoServlet</url-pattern>
         <servlet-name>UserWork_logsInfoServlet</servlet-name>
         <servlet-class>com.wk.system.web.servlet.UserWork_logsInfoServlet</servlet-class>
     </servlet>
