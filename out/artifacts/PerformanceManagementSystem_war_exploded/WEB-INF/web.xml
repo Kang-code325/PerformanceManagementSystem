@@ -76,6 +76,25 @@
         <url-pattern>/userPerformanceInfoServlet</url-pattern>
     </servlet-mapping>
 
+        <servlet-name>AdminInfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AdminInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminInfoServlet</servlet-name>
+        <url-pattern>/adminInfoServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AdminInfosServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AdminInfosServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminInfosServlet</servlet-name>
+        <url-pattern>/adminInfosServlet</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>
