@@ -32,10 +32,24 @@ public class UsersInfoServlet extends HttpServlet {
 //                return;
 //            }
 
+            // 如果参数不存在，设置默认值为1和10
+            String pageNumParam = request.getParameter("pageNum");
+            String pageSizeParam = request.getParameter("pageSize");
+
+            int pageNum = (pageNumParam != null) ? Integer.parseInt(pageNumParam) : 1;
+            int pageSize = (pageSizeParam != null) ? Integer.parseInt(pageSizeParam) : 10;
+
             EmployeeService employeeService = new EmployeeService();
-            // 获取所有员工信息
-            List<Employee> employeeList = employeeService.userinfos();  // 获取员工列表
+
+            // 获取分页数据
+            List<Employee> employeeList = employeeService.userinfoList(pageNum, pageSize);
+            int total = employeeService.getTotalEmployeeCount();
+
+            // 设置数据到 JSP
             request.setAttribute("employeeList", employeeList);
+            request.setAttribute("total", total);
+            request.setAttribute("pageSize", pageSize);
+            request.setAttribute("currentPage", pageNum);
 
             // 转发到 JSP 页面
             request.getRequestDispatcher("userInfos.jsp").forward(request, response);

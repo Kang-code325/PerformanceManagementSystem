@@ -6,6 +6,7 @@ import com.wk.system.utils.C3P0Utils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -34,6 +35,31 @@ public class EmployeeDao {
         QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
         String sql = "select * from employee";
         return queryRunner.query(sql, new BeanListHandler<>(Employee.class));
+    }
+
+    // 分页查询员工列表
+    public List<Employee> getEmployeeList(int pageNum, int pageSize) throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "SELECT * FROM employee LIMIT ?, ?";
+
+        // 计算偏移量 (offset)
+        int offset = (pageNum - 1) * pageSize;
+
+        // 执行查询，使用 BeanListHandler 将结果转换为 Employee 对象列表
+        List<Employee> employeeList = queryRunner.query(sql, new BeanListHandler<>(Employee.class), offset, pageSize);
+
+        return employeeList;
+    }
+
+    // 获取员工总数
+    public int getTotalCount() throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "SELECT COUNT(*) FROM employee";
+
+        // 使用 ScalarHandler 来获取单个值 (总记录数)
+        Long totalCount = queryRunner.query(sql, new ScalarHandler<>());
+
+        return totalCount.intValue();
     }
 
 

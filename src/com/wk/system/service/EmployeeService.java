@@ -34,7 +34,19 @@ public class EmployeeService {
         // 返回结果
         return employees;
     }
+    public List<Employee> userinfoList(int pageNum, int pageSize) throws SQLException {
+        EmployeeDao employeeDao = new EmployeeDao();
+        // 调用 EmployeeDao 进行分页查询
+        List<Employee> employeeList = employeeDao.getEmployeeList(pageNum, pageSize);
+        return employeeList;
+    }
 
+    // 获取员工总数
+    public int getTotalEmployeeCount() throws SQLException {
+        EmployeeDao employeeDao = new EmployeeDao();
+        // 调用 EmployeeDao 获取总员工数
+        return employeeDao.getTotalCount();
+    }
 
 
 }

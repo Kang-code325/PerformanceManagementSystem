@@ -23,11 +23,11 @@ public class AdminInfosServlet extends HttpServlet {
             HttpSession session = request.getSession();  // 获取会话对象
             String specialist_id = (String) session.getAttribute("specialist_id");
 //            System.out.println("这里是"+specialist_id);
-            if (specialist_id == null) {
-                // 如果没有用户信息，重定向到登录页面或者给出提示
-                response.sendRedirect("adminLogin.html");
-                return;
-            }
+//            if (specialist_id == null) {
+//                // 如果没有用户信息，重定向到登录页面或者给出提示
+//                response.sendRedirect("adminLogin.html");
+//                return;
+//            }
 
             PersonnelSpecialistService personnelSpecialistService = new PersonnelSpecialistService();
             // 获取所有管理员信息

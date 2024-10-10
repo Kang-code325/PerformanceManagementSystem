@@ -134,9 +134,10 @@
         $("iframe").css("height", h + "px");
       }
 
-      $(window).resize(function () {
-        FrameWH();
+      $(document).ready(function () {
+       FrameWH(); // 页面加载后延迟 100ms 计算 iframe 高度
       });
+
 
       //打开默认页面
       active.tabAdd("http://localhost:8080/System_war_exploded/adminInfoServlet", 11, "个人中心");
@@ -172,9 +173,6 @@
             <dd><a data-url="http://localhost:8080/System_war_exploded/usersInfoServlet" data-id="13" data-title="员工信息" href="javascript:void(0);"
                    class="site-demo-active"
                    data-type="tabAdd">员工信息</a></dd>
-            <dd><a data-url="userWork_logs.html" data-id="14" data-title="个人日志" href="javascript:void(0);"
-                   class="site-demo-active"
-                   data-type="tabAdd">个人日志</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">
