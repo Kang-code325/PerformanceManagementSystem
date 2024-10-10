@@ -7,17 +7,20 @@
     <title>用户信息</title>
 </head>
 <body>
-<h1>员工列表</h1>
+<h1>员工个人信息</h1>
 <table border="1">
     <tr>
         <th>姓名</th>
-
+        <th>工号</th>
+        <th>部门</th>
         <th>职业</th>
     </tr>
         <tr>
 <%--            <td><%=request.getAttribute("employee_id") %></td>--%>
 <%--            <td><%=request.getAttribute("employee_id") %></td>--%>
             <td>${employee.name}</td>
+            <td>${employee.employee_id}</td>
+            <td>${employee.dep}</td>
             <td>${employee.job}</td>
         </tr>
 </table>

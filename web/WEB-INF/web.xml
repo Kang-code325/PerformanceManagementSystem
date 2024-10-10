@@ -66,6 +66,16 @@
         <url-pattern>/userInfoServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UserPerformanceInfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserPerformanceInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserPerformanceInfoServlet</servlet-name>
+        <url-pattern>/userPerformanceInfoServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

@@ -1,6 +1,7 @@
 package com.wk.system.domain;
 
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /*
@@ -26,12 +27,12 @@ public class Performance {
 
     private String appraise;
 
-    private LocalDateTime time;
+    private Timestamp time;
 
     public Performance() {
     }
 
-    public Performance(int id, String employee_id,String work ,String progress ,double score, String appraise, LocalDateTime time) {
+    public Performance(int id, String employee_id,String work ,String progress ,double score, String appraise, Timestamp time) {
         this.id = id;
         this.employee_id = employee_id;
         this.work = work;
@@ -73,11 +74,11 @@ public class Performance {
         this.appraise = appraise;
     }
 
-    public LocalDateTime getTime() {
+    public Timestamp getTime() {
         return time;
     }
 
-    public void setTime(LocalDateTime time) {
+    public void setTime(Timestamp time) {
         this.time = time;
     }
 
