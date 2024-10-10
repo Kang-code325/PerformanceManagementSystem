@@ -21,4 +21,12 @@ public class AttendanceDao {
         String sql = "INSERT INTO attendance (employee_id, time, approval) VALUES (?,?,?)";
         int rowsAffected = queryRunner.update(sql, employee_id, time, approval);
         return rowsAffected;
-    }}
+    }
+
+    public int addLeave(String employee_id, String leave, String approval) throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "INSERT INTO attendance (employee_id, `leave`, approval) VALUES (?,?,?)";
+        int rowsAffected = queryRunner.update(sql, employee_id, leave, approval);
+        return rowsAffected;
+    }
+}

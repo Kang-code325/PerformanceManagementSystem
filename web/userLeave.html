@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>请假</title>
-	</head>
-	<body>
-		安全中心
-	</body>
-</html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>多行文本框示例</title>
+</head>
+<body>
+<h1>假条编辑</h1>
+<form action="http://localhost:8080/System_war_exploded/userLeaveServlet" method="POST">
+	<label for="message">输入你的文本（假条记得加上请假时间哦！）:</label><br><br>
+	<textarea id="message" name="message" rows="10" cols="50" placeholder="在这里输入...（请勿超过100字）"></textarea><br><br>
+	<input type="submit" value="提交">
+</form>
+</body>
