@@ -105,6 +105,10 @@
     <servlet-mapping>
         <servlet-name>UsersInfoServlet</servlet-name>
         <url-pattern>/usersInfoServlet</url-pattern>
+    </servlet-mapping>
+
+    
+    <servlet>
         <servlet-name>UserWork_logsInfoServlet</servlet-name>
         <servlet-class>com.wk.system.web.servlet.UserWork_logsInfoServlet</servlet-class>
     </servlet>
