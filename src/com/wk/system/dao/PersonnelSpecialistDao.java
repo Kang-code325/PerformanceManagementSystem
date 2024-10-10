@@ -1,5 +1,6 @@
 package com.wk.system.dao;
 
+import com.wk.system.domain.Employee;
 import com.wk.system.domain.PersonnelSpecialist;
 import com.wk.system.utils.C3P0Utils;
 import org.apache.commons.dbutils.QueryRunner;
@@ -22,4 +23,11 @@ public class PersonnelSpecialistDao {
         int rowsAffected = queryRunner.update(sql, specialist_id, name, password);
         return rowsAffected;
     }
+    public PersonnelSpecialist getPersonnelSpecialistAll(String specialist_id) throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select * from personnelspecialist where specialist_id = ?";
+        PersonnelSpecialist personnelSpecialist = queryRunner.query(sql, new BeanHandler<>(PersonnelSpecialist.class), specialist_id);
+        return personnelSpecialist;
+    }
+
 }

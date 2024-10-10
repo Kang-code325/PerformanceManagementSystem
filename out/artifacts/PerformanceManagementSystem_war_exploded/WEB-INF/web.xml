@@ -66,6 +66,15 @@
         <url-pattern>/userInfoServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AdminInfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AdminInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminInfoServlet</servlet-name>
+        <url-pattern>/adminInfoServlet</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

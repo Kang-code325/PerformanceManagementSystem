@@ -59,4 +59,3 @@ out/production/PerformanceManagementSystem/com/wk/system/web/servlet/LoginServle
 out/production/PerformanceManagementSystem/com/wk/system/web/servlet/LogoutServlet.class
 out/production/PerformanceManagementSystem/jdbc.properties
 src/c3p0-config.xml
-src/jdbc.properties
