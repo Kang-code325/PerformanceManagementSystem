@@ -75,7 +75,7 @@
         <servlet-name>UserPerformanceInfoServlet</servlet-name>
         <url-pattern>/userPerformanceInfoServlet</url-pattern>
     </servlet-mapping>
-
+    <servlet>
         <servlet-name>AdminInfoServlet</servlet-name>
         <servlet-class>com.wk.system.web.servlet.AdminInfoServlet</servlet-class>
     </servlet>
@@ -94,6 +94,16 @@
     <servlet-mapping>
         <servlet-name>AdminInfosServlet</servlet-name>
         <url-pattern>/adminInfosServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UsersInfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UsersInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UsersInfoServlet</servlet-name>
+        <url-pattern>/usersInfoServlet</url-pattern>
     </servlet-mapping>
 
 

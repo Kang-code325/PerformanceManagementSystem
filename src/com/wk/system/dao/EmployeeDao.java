@@ -1,11 +1,14 @@
 package com.wk.system.dao;
 
 import com.wk.system.domain.Employee;
+import com.wk.system.domain.PersonnelSpecialist;
 import com.wk.system.utils.C3P0Utils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class EmployeeDao {
     //根据 工号，密码获取员工类信息
@@ -26,6 +29,11 @@ public class EmployeeDao {
         String sql = "select * from employee where employee_id = ?";
         Employee employee = queryRunner.query(sql, new BeanHandler<>(Employee.class), employee_id);
         return employee;
+    }
+    public List<Employee> getAllEmployees() throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select * from employee";
+        return queryRunner.query(sql, new BeanListHandler<>(Employee.class));
     }
 
 
