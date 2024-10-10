@@ -6,6 +6,7 @@ import com.wk.system.domain.Attendance;
 import com.wk.system.domain.Work_logs;
 
 import java.sql.SQLException;
+import java.sql.Time;
 import java.util.List;
 
 public class AttendanceService {
@@ -13,4 +14,11 @@ public class AttendanceService {
         AttendanceDao attendanceDao = new AttendanceDao();
         return attendanceDao.getAttendanceAll(employee_id);
     }
+
+    public int addDaKaInfo(String employee_id, Time time, String approval) throws SQLException {
+        AttendanceDao attendanceDao = new AttendanceDao();
+        int rows = attendanceDao.addDaKa(employee_id, time, approval);
+        return rows;
+    }
+
 }

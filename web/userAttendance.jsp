@@ -15,7 +15,9 @@
 <table border="1" align="center" width="88%">
     <tr>
         <td colspan="7">
-            <a href="#">  打卡</a>
+            <form action="http://localhost:8080/System_war_exploded/daKaServlet" method="POST">
+                <button type="submit">打卡</button>
+            </form>
         </td>
         <td colspan="1" align="right">
             <input type="button" value="删除选中" onclick="delCheck()">
