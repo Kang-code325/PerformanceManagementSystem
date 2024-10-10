@@ -40,6 +40,10 @@ public class LoginServlet extends HttpServlet {
             // 用户名和密码正确，创建 session 并存储用户信息
             HttpSession session = req.getSession();
             session.setAttribute("employee_id", employee_id);
+
+            String employeeid = (String) session.getAttribute("employee_id");
+            System.out.println("这里是"+employeeid);
+
             // 重定向到home页面
             resp.sendRedirect("http://localhost:8080/System_war_exploded/userHome.html");
         }

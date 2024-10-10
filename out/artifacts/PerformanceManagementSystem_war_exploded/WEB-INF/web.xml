@@ -59,7 +59,6 @@
     <servlet>
         <servlet-name>UserInfoServlet</servlet-name>
         <servlet-class>com.wk.system.web.servlet.UserInfoServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
