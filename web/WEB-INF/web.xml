@@ -105,8 +105,8 @@
     <servlet-mapping>
         <servlet-name>UsersInfoServlet</servlet-name>
         <url-pattern>/usersInfoServlet</url-pattern>
-
     </servlet-mapping>
+
 
     <servlet>
         <servlet-name>UserWork_logsInfoServlet</servlet-name>
@@ -116,6 +116,16 @@
     <servlet-mapping>
         <servlet-name>UserWork_logsInfoServlet</servlet-name>
         <url-pattern>/userWork_logsInfoServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserAttendanceInfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserAttendanceInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserAttendanceInfoServlet</servlet-name>
+        <url-pattern>/userAttendanceInfoServlet</url-pattern>
     </servlet-mapping>
 
 
