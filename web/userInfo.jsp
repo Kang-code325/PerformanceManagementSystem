@@ -11,7 +11,7 @@
 <table border="1">
     <tr>
         <th>姓名</th>
-        <th>邮箱</th>
+        <th>职业</th>
     </tr>
         <tr>
 <%--            <td><%=request.getAttribute("employee_id") %></td>--%>
