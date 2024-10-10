@@ -6,7 +6,6 @@ package com.wk.system.web.servlet;
 # @Time    : 2024/10/10 11:17
 # @Function:
 */
-import com.google.gson.Gson;
 import com.wk.system.domain.PersonnelSpecialist;
 import com.wk.system.service.PersonnelSpecialistService;
 import javax.servlet.ServletException;
