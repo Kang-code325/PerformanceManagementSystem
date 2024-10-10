@@ -107,5 +107,15 @@
         <url-pattern>/userWork_logsInfoServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UserAttendanceInfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserAttendanceInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserAttendanceInfoServlet</servlet-name>
+        <url-pattern>/userAttendanceInfoServlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
