@@ -53,4 +53,14 @@ public class PerformanceDao {
         return queryRunner.query(sql, new BeanListHandler<>(Performance.class));
     }
 
+
+    public int addAdminPerformance(String employee_id, String work, String score, String appraise) throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        // SQL 语句，更新多个字段
+        String sql = "INSERT INTO performance (employee_id, work, score, appraise) VALUES (?, ?, ?, ?)";
+        // 执行更新，并将影响的行数返回
+        int rowsAffected = queryRunner.update(sql, employee_id, work, score, appraise);
+        return rowsAffected;
+    }
+
 }

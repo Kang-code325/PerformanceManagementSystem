@@ -22,12 +22,13 @@
             <%--            </form>--%>
         </td>
         <td colspan="1" align="right">
-            <a href="">添加</a>
+            <a href="http://localhost:8080/System_war_exploded/AdminAddPerfomance.jsp">添加</a>
         </td>
     </tr>
     <tr>
         <td><input type="checkbox" onclick="checkAll(this)"></td>
         <th>pid</th>
+        <th>员工工号</th>
         <th>任务内容</th>
         <th>任务进度</th>
         <th>得分</th>
@@ -42,6 +43,7 @@
                     <input type="checkbox" name="pid" value="${p.id }">
                 </td>
                 <td width='8%'>${p.id }</td>
+                <td>${p.employee_id }</td>
                 <td>${p.work }</td>
                 <td>${p.progress }</td>
                 <td width='8%'>${p.score }</td>

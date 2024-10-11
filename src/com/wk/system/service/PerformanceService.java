@@ -44,4 +44,10 @@ public class PerformanceService {
         PerformanceDao performanceDao = new PerformanceDao();
         return performanceDao.getOneAdminPerformance(id);
     }
+
+    public int addAdminProgress(String employee_id, String work, String score, String appraise) throws SQLException {
+        PerformanceDao performanceDao = new PerformanceDao();
+        int rows = performanceDao.addAdminPerformance(employee_id, work, score, appraise);
+        return rows;
+    }
 }
