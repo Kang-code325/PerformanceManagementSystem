@@ -55,7 +55,7 @@ public class EmployeeServlet extends HttpServlet {
 
 
         // 创建员工对象
-        Employee employee = new Employee(name, employeeId, password, dep, job);
+        Employee employee = new Employee( employeeId,name, password, dep, job);
 
         System.out.println(employee);
         // 调用Service层方法
