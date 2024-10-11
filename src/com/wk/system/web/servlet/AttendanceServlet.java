@@ -6,7 +6,7 @@ package com.wk.system.web.servlet;
 # @Time    : 2024/10/11 19:34
 # @Function:
 */
-package com.wk.system.web.servlet;
+//package com.wk.system.web.servlet;
 
 import com.wk.system.domain.Attendance;
 import com.wk.system.service.AttendanceService;
@@ -39,7 +39,7 @@ public class AttendanceServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-
+        System.out.println(action+"233");
         if ("delete".equals(action)) {
             deleteAttendanceRecord(request, response);
         }

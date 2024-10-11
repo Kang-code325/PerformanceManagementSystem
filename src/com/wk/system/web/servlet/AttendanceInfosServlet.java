@@ -21,8 +21,8 @@ public class AttendanceInfosServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         try {
-            HttpSession session = request.getSession();  // 获取会话对象
-            String employee_id = (String) session.getAttribute("employee_id");
+//            HttpSession session = request.getSession();  // 获取会话对象
+//            String employee_id = (String) session.getAttribute("employee_id");
 
             AttendanceService attendanceService = new AttendanceService();
 

@@ -38,7 +38,7 @@
         </thead>
         <tbody>
         <form method="post">
-            <c:forEach items="${list}" var="p">
+            <c:forEach items="${attendanceList}" var="p">
                 <tr>
                     <td width='5%'>
                         <input type="checkbox" name="pid" value="${p.id}" class="layui-checkbox" lay-skin="primary">
@@ -180,7 +180,7 @@
             btn: ['确定', '取消'] // 按钮
         }, function () {
             // 确定删除，使用 GET 请求
-            window.location.href = `http://localhost:8080/System_war_exploded/daKaServlet?action=delete&id=` + recordId;
+            window.location.href = `http://localhost:8080/System_war_exploded/attendanceServlet?action=delete&id=` + recordId;
         }, function () {
             // 取消删除
             layer.closeAll();
