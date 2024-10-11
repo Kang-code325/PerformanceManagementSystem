@@ -29,32 +29,32 @@ public class AttendanceService {
 
 
     // 获取分页的考勤信息
-    public List<Attendance> getAttendanceListByPage(int pageNum, int pageSize) {
+    public List<Attendance> getAttendanceListByPage(int pageNum, int pageSize) throws SQLException{
         AttendanceDao attendanceDao = new AttendanceDao();
         int offset = (pageNum - 1) * pageSize;
         return attendanceDao.getAttendanceListByPage(offset, pageSize);
     }
 
     // 获取考勤总记录数
-    public int getTotalAttendanceCount() {
+    public int getTotalAttendanceCount() throws SQLException{
         AttendanceDao attendanceDao = new AttendanceDao();
         return attendanceDao.getTotalAttendanceCount();
     }
 
     // 添加考勤记录
-    public void addAttendance(Attendance attendance) {
+    public void addAttendance(Attendance attendance) throws SQLException{
         AttendanceDao attendanceDao = new AttendanceDao();
         attendanceDao.addAttendance(attendance);
     }
 
     // 更新考勤记录
-    public void updateAttendance(Attendance attendance) {
+    public void updateAttendance(Attendance attendance) throws SQLException{
         AttendanceDao attendanceDao = new AttendanceDao();
         attendanceDao.updateAttendance(attendance);
     }
 
     // 删除考勤记录
-    public void deleteAttendance(int id) {
+    public void deleteAttendance(int id) throws SQLException{
         AttendanceDao attendanceDao = new AttendanceDao();
         attendanceDao.deleteAttendance(id);
     }
