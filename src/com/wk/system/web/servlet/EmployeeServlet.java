@@ -21,6 +21,8 @@ public class EmployeeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
         String action = request.getParameter("action");
 
         System.out.println("action"+action);
@@ -33,6 +35,8 @@ public class EmployeeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
         String action = request.getParameter("action");
 
         System.out.println("action"+action);
@@ -51,7 +55,7 @@ public class EmployeeServlet extends HttpServlet {
 
 
         // 创建员工对象
-        Employee employee = new Employee(employeeId,name,  password, dep, job);
+        Employee employee = new Employee( employeeId,name, password, dep, job);
 
         System.out.println(employee);
         // 调用Service层方法
