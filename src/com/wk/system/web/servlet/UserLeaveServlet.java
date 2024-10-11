@@ -15,7 +15,7 @@ import java.time.LocalTime;
 public class UserLeaveServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=utf-8");
 
         HttpSession session = request.getSession();  // 获取会话对象
