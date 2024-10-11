@@ -35,7 +35,7 @@
         <td>${p.logs }</td>
         <td width='16%'>
           <a href="http://localhost:8080/System_war_exploded/userAddLogs.html">添加</a>
-          <a href="#">修改</a>
+          <a href="${pageContext.request.contextPath}/userEditLogsServlet?id=${p.id}">修改</a>
           <a href="${pageContext.request.contextPath }/userDelLogsServlet?pid=${p.id}">删除</a>
         </td>
       </tr>

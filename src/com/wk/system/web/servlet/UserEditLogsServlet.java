@@ -1,0 +1,33 @@
+package com.wk.system.web.servlet;
+
+import com.wk.system.domain.Work_logs;
+import com.wk.system.service.Work_logsService;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class UserEditLogsServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
+        String id = request.getParameter("id");  // 获取请求中的 id 参数
+
+        // 从数据库中根据 id 获取相应的日志对象
+        Work_logsService workLogsService = new Work_logsService();
+        Work_logs workLogs = null;
+        try {
+            workLogs = workLogsService.getOneLog(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        // 将日志对象传递到编辑页面
+        request.setAttribute("workLogs", workLogs);
+        request.getRequestDispatcher("/userUpdateLogs.jsp").forward(request, response);
+    }
+}

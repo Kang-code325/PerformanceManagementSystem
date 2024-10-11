@@ -168,5 +168,25 @@
         <url-pattern>/userDelLogsServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UserEditLogsServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserEditLogsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserEditLogsServlet</servlet-name>
+        <url-pattern>/userEditLogsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserUpdateLogsServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserUpdateLogsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserUpdateLogsServlet</servlet-name>
+        <url-pattern>/userUpdateLogsServlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
