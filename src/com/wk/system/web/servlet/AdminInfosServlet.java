@@ -31,20 +31,29 @@ public class AdminInfosServlet extends HttpServlet {
 
             PersonnelSpecialistService personnelSpecialistService = new PersonnelSpecialistService();
             // 获取所有管理员信息
-            List<PersonnelSpecialist> adminList = personnelSpecialistService.admininfos();
+//            List<PersonnelSpecialist> adminList = personnelSpecialistService.admininfos();
 //            request.setAttribute("adminList", adminList);
 
-            // 转发到 JSP 页面
-////            request.getRequestDispatcher("admininfos.jsp").forward(request, response);
-//
-//            // 使用Gson将对象转换为JSON格式
-//            Gson gson = new Gson();
-//            String json = gson.toJson(adminList);
-//            response.setContentType("application/json");
-//            response.setCharacterEncoding("UTF-8");
-//
-//            // 返回JSON数据
-//            response.getWriter().write(json);
+// 获取分页参数
+            String pageNumStr = request.getParameter("pageNum");
+            String pageSizeStr = request.getParameter("pageSize");
+
+            // 设置默认页码和每页数据条数
+            int pageNum = pageNumStr != null ? Integer.parseInt(pageNumStr) : 1;
+            int pageSize = pageSizeStr != null ? Integer.parseInt(pageSizeStr) : 10;
+
+            // 获取分页后的管理员信息
+            List<PersonnelSpecialist> adminList = personnelSpecialistService.getAdminListByPage(pageNum, pageSize);
+
+            // 获取总条数以计算分页信息
+            int total = personnelSpecialistService.getTotalAdminCount();
+
+            // 将分页数据设置到 request 作用域
+            request.setAttribute("adminList", adminList);
+            request.setAttribute("total", total);
+            request.setAttribute("pageSize", pageSize);
+            request.setAttribute("currentPage", pageNum);
+
 
 
             request.setAttribute("adminList", adminList);

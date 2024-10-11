@@ -37,5 +37,19 @@ public class PersonnelSpecialistService {
         return personnelSpecialists;
     }
 
+    // 分页查询管理员信息
+    public List<PersonnelSpecialist> getAdminListByPage(int pageNum, int pageSize) throws SQLException {
+        PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
+        // 调用 PersonnelSpecialistDao 进行分页查询
+        return personnelSpecialistDao.getAdminListByPage(pageNum, pageSize);
+    }
+
+    // 获取管理员总数
+    public int getTotalAdminCount() throws SQLException {
+        PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
+        // 调用 PersonnelSpecialistDao 获取总管理员数
+        return personnelSpecialistDao.getTotalCount();
+    }
+
 
 }
