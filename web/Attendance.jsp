@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <title>打卡记录</title>
     <!-- 引入layui CSS -->
-    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="layui/css/layui.css" >
 </head>
 <body>
 
@@ -37,7 +37,7 @@
         </tr>
         </thead>
         <tbody>
-        <form method="post">
+
             <c:forEach items="${attendanceList}" var="p">
                 <tr>
                     <td width='5%'>
@@ -55,7 +55,6 @@
                     </td>
                 </tr>
             </c:forEach>
-        </form>
         </tbody>
     </table>
 </div>
