@@ -57,7 +57,7 @@ public class AttendanceDao {
     // 添加考勤记录
     public void addAttendance(Attendance attendance) {
         QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
-        String sql = "INSERT INTO attendance (employee_id, date, time, leave, approval) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO attendance (employee_id, date, time, `leave`, approval) VALUES (?, ?, ?, ?, ?)";
         Object[] params = {
                 attendance.getEmployee_id(),
                 attendance.getDate(),

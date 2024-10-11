@@ -106,7 +106,7 @@ public class AttendanceServlet extends HttpServlet {
     // 删除考勤记录方法
     private void deleteAttendanceRecord(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException {
         int id = Integer.parseInt(request.getParameter("id"));
-
+        System.out.println("123"+id);
         // 调用Service层方法
         attendanceService.deleteAttendance(id);
 

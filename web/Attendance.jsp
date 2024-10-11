@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <title>打卡记录</title>
     <!-- 引入layui CSS -->
-    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="layui/css/layui.css" >
 </head>
 <body>
 
@@ -37,7 +37,7 @@
         </tr>
         </thead>
         <tbody>
-        <form method="post">
+
             <c:forEach items="${attendanceList}" var="p">
                 <tr>
                     <td width='5%'>
@@ -55,7 +55,6 @@
                     </td>
                 </tr>
             </c:forEach>
-        </form>
         </tbody>
     </table>
 </div>
@@ -97,12 +96,13 @@
 <!--                            <input type="text" name="date" required lay-verify="required" placeholder="请输入日期" class="layui-input">-->
 <!--                        </div>-->
 <!--                    </div>-->
-<!--                    <div class="layui-form-item">-->
-<!--                        <label class="layui-form-label">时间</label>-->
-<!--                        <div class="layui-input-block">-->
-<!--                            <input type="text" name="time" required lay-verify="required" placeholder="请输入时间" class="layui-input">-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">工号</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="employee_id" required lay-verify="required" placeholder="请输入工号" class="layui-input">
+                        </div>
+                    </div>
+
                     <div class="layui-form-item">
                         <label class="layui-form-label">假条</label>
                         <div class="layui-input-block">
