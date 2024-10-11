@@ -229,13 +229,13 @@
           <div class="layui-form-item">
             <label class="layui-form-label">工号</label>
             <div class="layui-input-block">
-              <input type="text" name="employee_id" required lay-verify="required" placeholder="请输入工号" class="layui-input" value="">
+              <input type="text" name="employee_id" required lay-verify="required" placeholder="请输入工号" class="layui-input" >
             </div>
           </div>
           <div class="layui-form-item">
             <label class="layui-form-label">密码</label>
             <div class="layui-input-block">
-              <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" class="layui-input" value="">
+              <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" class="layui-input" >
             </div>
           </div>
           <div class="layui-form-item">
