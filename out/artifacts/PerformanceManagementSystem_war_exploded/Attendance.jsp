@@ -89,7 +89,7 @@
             area: ['500px', '400px'],
             content: `
             <div style="padding: 20px;">
-                <form class="layui-form" action="http://localhost:8080/System_war_exploded/daKaServlet" method="post">
+                <form class="layui-form" action="http://localhost:8080/System_war_exploded/attendanceServlet" method="post">
                     <input type="hidden" name="action" value="add">
                     <div class="layui-form-item">
                         <label class="layui-form-label">日期</label>

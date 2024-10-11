@@ -27,4 +27,36 @@ public class AttendanceService {
         return rows;
     }
 
+
+    // 获取分页的考勤信息
+    public List<Attendance> getAttendanceListByPage(int pageNum, int pageSize) {
+        AttendanceDao attendanceDao = new AttendanceDao();
+        int offset = (pageNum - 1) * pageSize;
+        return attendanceDao.getAttendanceListByPage(offset, pageSize);
+    }
+
+    // 获取考勤总记录数
+    public int getTotalAttendanceCount() {
+        AttendanceDao attendanceDao = new AttendanceDao();
+        return attendanceDao.getTotalAttendanceCount();
+    }
+
+    // 添加考勤记录
+    public void addAttendance(Attendance attendance) {
+        AttendanceDao attendanceDao = new AttendanceDao();
+        attendanceDao.addAttendance(attendance);
+    }
+
+    // 更新考勤记录
+    public void updateAttendance(Attendance attendance) {
+        AttendanceDao attendanceDao = new AttendanceDao();
+        attendanceDao.updateAttendance(attendance);
+    }
+
+    // 删除考勤记录
+    public void deleteAttendance(int id) {
+        AttendanceDao attendanceDao = new AttendanceDao();
+        attendanceDao.deleteAttendance(id);
+    }
+
 }

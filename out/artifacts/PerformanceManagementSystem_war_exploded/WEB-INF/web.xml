@@ -230,5 +230,25 @@
         <url-pattern>/personnelSpecialistServlet </url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AttendanceInfosServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AttendanceInfosServlet</servlet-class> <!-- 这里是你的Servlet类的全路径 -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AttendanceInfosServlet</servlet-name>
+        <url-pattern>/attendanceInfosServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AttendanceServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AttendanceServlet</servlet-class> <!-- 这里是你的Servlet类的全路径 -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AttendanceServlet</servlet-name>
+        <url-pattern>/attendanceServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
+    </servlet-mapping>
 
 </web-app>

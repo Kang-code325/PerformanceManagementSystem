@@ -69,8 +69,8 @@ public class EmployeeDao {
 
     // 添加员工
     public static void addEmployee(Employee employee) {
-        String sql = "INSERT INTO employee (name, employee_id, password, dep, job) VALUES (?, ?, ?, ?, ?)";
-        Object[] params = { employee.getName(), employee.getEmployee_id(), employee.getPassword(), employee.getDep(), employee.getJob() };
+        String sql = "INSERT INTO employee (employee_id,name,  password, dep, job) VALUES (?, ?, ?, ?, ?)";
+        Object[] params = { employee.getEmployee_id(),employee.getName(),  employee.getPassword(), employee.getDep(), employee.getJob() };
 
         try {
             queryRunner.update(sql, params);
