@@ -8,10 +8,12 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
+import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.List;
 
 public class PersonnelSpecialistDao {
+    private static QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
     //管理员数据库操作
     public PersonnelSpecialist getPersonnelSpecialist(String specialist_id, String password) throws SQLException {
         QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
@@ -62,6 +64,37 @@ public class PersonnelSpecialistDao {
 
         return totalCount.intValue();
     }
+    // 添加专员
+    public void addPersonnelSpecialist(PersonnelSpecialist personnelSpecialist) {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "INSERT INTO personnelspecialist (specialist_id, name, password) VALUES (?, ?, ?)";
+        try {
+            queryRunner.update(sql, personnelSpecialist.getSpecialist_id(), personnelSpecialist.getName(), personnelSpecialist.getPassword());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
+    // 更新专员
+    public void updatePersonnelSpecialist(PersonnelSpecialist personnelSpecialist) {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "UPDATE personnelspecialist SET specialist_id = ?, name = ?, password = ? WHERE id = ?";
+        try {
+            queryRunner.update(sql, personnelSpecialist.getSpecialist_id(), personnelSpecialist.getName(), personnelSpecialist.getPassword(), personnelSpecialist.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // 删除专员
+    public void deletePersonnelSpecialist(int id) {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "DELETE FROM personnelspecialist WHERE id = ?";
+        try {
+            queryRunner.update(sql, id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

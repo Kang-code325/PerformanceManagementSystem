@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class PersonnelSpecialistService {
+//    private PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
     public PersonnelSpecialist login(String specialist_id, String password) throws SQLException {
         PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
         PersonnelSpecialist personnelSpecialist = personnelSpecialistDao.getPersonnelSpecialist(specialist_id, password);
@@ -41,6 +42,7 @@ public class PersonnelSpecialistService {
     public List<PersonnelSpecialist> getAdminListByPage(int pageNum, int pageSize) throws SQLException {
         PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
         // 调用 PersonnelSpecialistDao 进行分页查询
+
         return personnelSpecialistDao.getAdminListByPage(pageNum, pageSize);
     }
 
@@ -49,6 +51,25 @@ public class PersonnelSpecialistService {
         PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
         // 调用 PersonnelSpecialistDao 获取总管理员数
         return personnelSpecialistDao.getTotalCount();
+    }
+
+
+    // 添加专员
+    public void addPersonnelSpecialist(PersonnelSpecialist personnelSpecialist) {
+        PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
+        personnelSpecialistDao.addPersonnelSpecialist(personnelSpecialist);
+    }
+
+    // 更新专员
+    public void updatePersonnelSpecialist(PersonnelSpecialist personnelSpecialist) {
+        PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
+        personnelSpecialistDao.updatePersonnelSpecialist(personnelSpecialist);
+    }
+
+    // 删除专员
+    public void deletePersonnelSpecialist(int id) {
+        PersonnelSpecialistDao personnelSpecialistDao = new PersonnelSpecialistDao();
+        personnelSpecialistDao.deletePersonnelSpecialist(id);
     }
 
 

@@ -34,6 +34,15 @@ public class Employee {
         this.dep = dep;
         this.job = job;
     }
+    public Employee(String employee_id, String name , String password, String dep, String job) {
+        this.employee_id = employee_id;
+        this.name = name;
+        this.password = password;
+        this.dep = dep;
+        this.job = job;
+    }
+
+
 
     public int getId() {
         return id;

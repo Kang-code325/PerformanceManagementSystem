@@ -133,6 +133,10 @@
         var h = $(window).height() - 41 - 10 - 60 - 10 - 44 - 10;
         $("iframe").css("height", h + "px");
       }
+      
+      $(window).resize(function () {
+        FrameWH();
+      });
 
       $(document).ready(function () {
        FrameWH(); // 页面加载后延迟 100ms 计算 iframe 高度
@@ -178,12 +182,9 @@
         <li class="layui-nav-item">
           <a class="" href="javascript:void(0);">考勤管理</a>
           <dl class="layui-nav-child">
-            <dd><a data-url="userAttendance.html" data-id="21" data-title="每日打卡" href="javascript:void(0);"
+            <dd><a data-url="userAttendance.html" data-id="21" data-title="考勤管理" href="javascript:void(0);"
                    class="site-demo-active"
-                   data-type="tabAdd">每日打卡</a></dd>
-            <dd><a data-url="userLeave.html" data-id="22" data-title="请假管理" href="javascript:void(0);"
-                   class="site-demo-active"
-                   data-type="tabAdd">请假管理</a></dd>
+                   data-type="tabAdd">考勤管理</a></dd>
           </dl>
         </li>
       </ul>

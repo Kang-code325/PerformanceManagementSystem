@@ -48,5 +48,35 @@ public class EmployeeService {
         return employeeDao.getTotalCount();
     }
 
+    //按钮的增删改
+
+    //
+    // 添加员工
+    public void addEmployee(Employee employee) {
+        // 可以在这里处理业务逻辑，例如校验数据
+        EmployeeDao.addEmployee(employee);
+    }
+
+    // 更新员工
+    public void updateEmployee(Employee employee) {
+        // 处理更新逻辑
+        EmployeeDao.updateEmployee(employee);
+    }
+
+    // 删除员工
+    public void deleteEmployee(String Id) {
+        // 可以在删除前进行检查
+        EmployeeDao.deleteEmployee(Id);
+    }
+
+//    // 查询所有员工
+//    public List<Employee> getAllEmployees() {
+//        return EmployeeDao.getAllEmployees();
+//    }
+
+    // 根据ID查询员工
+    public Employee getEmployeeById(String employeeId) {
+        return EmployeeDao.getEmployeeById(employeeId);
+    }
 
 }
