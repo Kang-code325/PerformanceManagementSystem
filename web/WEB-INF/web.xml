@@ -138,5 +138,15 @@
         <url-pattern>/daKaServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UserLeaveServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserLeaveServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserLeaveServlet</servlet-name>
+        <url-pattern>/userLeaveServlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

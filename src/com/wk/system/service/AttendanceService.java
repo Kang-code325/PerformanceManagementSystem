@@ -21,4 +21,10 @@ public class AttendanceService {
         return rows;
     }
 
+    public int addLeaveInfo(String employee_id, String leave, String approval) throws SQLException {
+        AttendanceDao attendanceDao = new AttendanceDao();
+        int rows = attendanceDao.addLeave(employee_id, leave, approval);
+        return rows;
+    }
+
 }
