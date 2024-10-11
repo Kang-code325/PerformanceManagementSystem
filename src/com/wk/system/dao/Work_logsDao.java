@@ -22,4 +22,11 @@ public class Work_logsDao {
         return rowsAffected;
     }
 
+    public int delWork_logs(String id) throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "DELETE FROM work_logs WHERE id = ?";
+        int rowsAffected = queryRunner.update(sql, id);
+        return rowsAffected;
+    }
+
 }

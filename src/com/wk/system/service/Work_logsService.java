@@ -20,4 +20,10 @@ public class Work_logsService {
         int rows = workLogsDao.addWork_logs(employee_id, logs);
         return rows;
     }
+
+    public int delLogs(String id) throws SQLException {
+        Work_logsDao workLogsDao = new Work_logsDao();
+        int rows = workLogsDao.delWork_logs(id);
+        return rows;
+    }
 }
