@@ -27,4 +27,21 @@ public class PerformanceService {
         PerformanceDao performanceDao = new PerformanceDao();
         return performanceDao.getOnePerformance(id);
     }
+
+    public List<Performance> adminPerformanceInfo() throws SQLException {
+        PerformanceDao performanceDao = new PerformanceDao();
+//        Performance performance = performanceDao.getPerforamnceAll(employee_id);
+        return performanceDao.getAllPerformance();
+    }
+
+    public int updateAdminProgress(String id, String employee_id, String work, String score, String appraise) throws SQLException {
+        PerformanceDao performanceDao = new PerformanceDao();
+        int rows = performanceDao.updateAdminPerformance(id, employee_id, work, score, appraise);
+        return rows;
+    }
+
+    public Performance getOneAdminProgress(String id) throws SQLException {
+        PerformanceDao performanceDao = new PerformanceDao();
+        return performanceDao.getOneAdminPerformance(id);
+    }
 }
