@@ -47,7 +47,7 @@
                 <td>${p.appraise }</td>
                 <td>${p.time }</td>
                 <td width='8%'>
-                    <a href="#">修改</a>
+                    <a href="${pageContext.request.contextPath}/userEditProgressServlet?id=${p.id}">修改</a>
                 </td>
             </tr>
         </c:forEach>

@@ -189,4 +189,25 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>UserEditProgressServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserEditProgressServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserEditProgressServlet</servlet-name>
+        <url-pattern>/userEditProgressServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserUpdateProgressServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserUpdateProgressServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserUpdateProgressServlet</servlet-name>
+        <url-pattern>/userUpdateProgressServlet</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
