@@ -15,14 +15,13 @@
 <table border="1" align="center" width="88%">
     <tr>
         <td colspan="7">
-            <form method="post">
-                员工工号:<input employee_id="employee_id">&nbsp;&nbsp;&nbsp;&nbsp;
-                关键词:<input name="kw">
-                &nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="查询">
-            </form>
+<%--            <form method="post">--%>
+<%--                员工工号:<input employee_id="employee_id">&nbsp;&nbsp;&nbsp;&nbsp;--%>
+<%--                关键词:<input name="kw">--%>
+<%--                &nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="查询">--%>
+<%--            </form>--%>
         </td>
         <td colspan="1" align="right">
-            <input type="button" value="删除选中" onclick="delCheck()">
         </td>
     </tr>
     <tr>
@@ -48,7 +47,7 @@
                 <td>${p.appraise }</td>
                 <td>${p.time }</td>
                 <td width='8%'>
-                    <a href="#">修改</a>
+                    <a href="${pageContext.request.contextPath}/userEditProgressServlet?id=${p.id}">修改</a>
                 </td>
             </tr>
         </c:forEach>

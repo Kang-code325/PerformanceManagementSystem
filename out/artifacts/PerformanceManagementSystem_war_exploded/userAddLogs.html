@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多行文本框示例</title>
+</head>
+<body>
+<h1>日志添加</h1>
+<form action="http://localhost:8080/System_war_exploded/userAddLogsServlet" method="POST">
+  <label for="message">输入你的日志:</label><br><br>
+  <textarea id="message" name="message" rows="10" cols="50" placeholder="在这里输入...（请勿超过200字）"></textarea><br><br>
+  <input type="submit" value="提交">
+</form>
+</body>
