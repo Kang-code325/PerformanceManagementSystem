@@ -6,7 +6,6 @@ package com.wk.system.web.servlet;
 # @Time    : 2024/10/11 19:34
 # @Function:
 */
-//package com.wk.system.web.servlet;
 
 import com.wk.system.domain.Attendance;
 import com.wk.system.service.AttendanceService;
@@ -17,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Date;
+import java.sql.SQLException;
 import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -30,9 +30,17 @@ public class AttendanceServlet extends HttpServlet {
         String action = request.getParameter("action");
 
         if ("add".equals(action)) {
-            addAttendanceRecord(request, response);
+            try {
+                addAttendanceRecord(request, response);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         } else if ("update".equals(action)) {
-            updateAttendanceRecord(request, response);
+            try {
+                updateAttendanceRecord(request, response);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -41,12 +49,16 @@ public class AttendanceServlet extends HttpServlet {
         String action = request.getParameter("action");
         System.out.println(action+"233");
         if ("delete".equals(action)) {
-            deleteAttendanceRecord(request, response);
+            try {
+                deleteAttendanceRecord(request, response);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
     // 添加考勤记录方法
-    private void addAttendanceRecord(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private void addAttendanceRecord(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException {
         String employeeId = request.getParameter("employee_id");
         String leave = request.getParameter("leave");
         String approval = request.getParameter("approval");
@@ -71,7 +83,7 @@ public class AttendanceServlet extends HttpServlet {
     }
 
     // 更新考勤记录方法
-    private void updateAttendanceRecord(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private void updateAttendanceRecord(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException {
         int id = Integer.parseInt(request.getParameter("id"));
         String employeeId = request.getParameter("employee_id");
         String leave = request.getParameter("leave");
@@ -92,7 +104,7 @@ public class AttendanceServlet extends HttpServlet {
     }
 
     // 删除考勤记录方法
-    private void deleteAttendanceRecord(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private void deleteAttendanceRecord(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException {
         int id = Integer.parseInt(request.getParameter("id"));
 
         // 调用Service层方法
