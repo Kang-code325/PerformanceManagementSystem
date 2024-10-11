@@ -16,9 +16,6 @@
   <tr>
     <td colspan="7">
     </td>
-    <td colspan="1" align="right">
-      <input type="button" value="删除选中" onclick="delCheck()">
-    </td>
   </tr>
   <tr>
     <td><input type="checkbox" onclick="checkAll(this)"></td>
@@ -37,7 +34,7 @@
         <td>${p.date }</td>
         <td>${p.logs }</td>
         <td width='16%'>
-          <a href="#">添加</a>
+          <a href="http://localhost:8080/System_war_exploded/userAddLogs.html">添加</a>
           <a href="#">修改</a>
           <a href="#">删除</a>
         </td>

@@ -148,5 +148,15 @@
         <url-pattern>/userLeaveServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UserAddLogsServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UserAddLogsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserAddLogsServlet</servlet-name>
+        <url-pattern>/userAddLogsServlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

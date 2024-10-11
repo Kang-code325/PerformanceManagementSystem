@@ -19,9 +19,6 @@
                 <button type="submit">打卡</button>
             </form>
         </td>
-        <td colspan="1" align="right">
-            <input type="button" value="删除选中" onclick="delCheck()">
-        </td>
     </tr>
     <tr>
         <td><input type="checkbox" onclick="checkAll(this)"></td>
