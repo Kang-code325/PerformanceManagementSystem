@@ -51,7 +51,7 @@
                 <td>${p.time }</td>
                 <td width='12%'>
                     <a href="${pageContext.request.contextPath}/adminEditPerFoServlet?id=${p.id}">修改</a>
-                    <a href="${pageContext.request.contextPath}/userEditProgressServlet?id=${p.id}">删除</a>
+                    <a href="${pageContext.request.contextPath}/adminDelPerfomance?id=${p.id}">删除</a>
                 </td>
             </tr>
         </c:forEach>

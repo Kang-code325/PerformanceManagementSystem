@@ -50,4 +50,10 @@ public class PerformanceService {
         int rows = performanceDao.addAdminPerformance(employee_id, work, score, appraise);
         return rows;
     }
+
+    public int delAdminProgress(String id) throws SQLException {
+        PerformanceDao performanceDao = new PerformanceDao();
+        int rows = performanceDao.delAdminPerformance(id);
+        return rows;
+    }
 }
