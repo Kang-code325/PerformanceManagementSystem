@@ -251,4 +251,44 @@
         <url-pattern>/attendanceServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AdminPerformanceServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AdminPerformanceServlet</servlet-class> <!-- 这里是你的Servlet类的全路径 -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminPerformanceServlet</servlet-name>
+        <url-pattern>/adminPerformanceServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminEditPerFoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AdminEditPerFoServlet</servlet-class> <!-- 这里是你的Servlet类的全路径 -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminEditPerFoServlet</servlet-name>
+        <url-pattern>/adminEditPerFoServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminUpdatePerfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AdminUpdatePerfoServlet</servlet-class> <!-- 这里是你的Servlet类的全路径 -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminUpdatePerfoServlet</servlet-name>
+        <url-pattern>/adminUpdatePerfoServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminAddPerfoServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.AdminAddPerfoServlet</servlet-class> <!-- 这里是你的Servlet类的全路径 -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminAddPerfoServlet</servlet-name>
+        <url-pattern>/adminAddPerfoServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
+    </servlet-mapping>
+
 </web-app>
