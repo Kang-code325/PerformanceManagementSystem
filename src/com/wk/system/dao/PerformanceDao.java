@@ -63,4 +63,11 @@ public class PerformanceDao {
         return rowsAffected;
     }
 
+    public int delAdminPerformance(String id) throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "DELETE FROM performance WHERE id = ?";
+        int rowsAffected = queryRunner.update(sql, id);
+        return rowsAffected;
+    }
+
 }
