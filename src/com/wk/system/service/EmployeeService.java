@@ -54,6 +54,7 @@ public class EmployeeService {
     // 添加员工
     public void addEmployee(Employee employee) {
         // 可以在这里处理业务逻辑，例如校验数据
+
         EmployeeDao.addEmployee(employee);
     }
 
@@ -75,8 +76,8 @@ public class EmployeeService {
 //    }
 
     // 根据ID查询员工
-    public Employee getEmployeeById(String employeeId) {
-        return EmployeeDao.getEmployeeById(employeeId);
+    public Employee getEmployeeById(String id) throws SQLException {
+        return EmployeeDao.getEmployeeById(id);
     }
 
 }

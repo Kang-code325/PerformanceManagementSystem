@@ -30,6 +30,10 @@ public class PersonnelSpecialistServlet extends HttpServlet {
         if ("add".equals(action)) {
             addPersonnelSpecialist(request, response);
         }
+        else if ("update".equals(action)) {
+//            System.out.println(action);
+            updatePersonnelSpecialist(request, response);
+        }
     }
 
     @Override
@@ -40,8 +44,6 @@ public class PersonnelSpecialistServlet extends HttpServlet {
 
         if ("delete".equals(action)) {
             deletePersonnelSpecialist(request, response);
-        }else if ("update".equals(action)) {
-            updatePersonnelSpecialist(request, response);
         }
     }
 

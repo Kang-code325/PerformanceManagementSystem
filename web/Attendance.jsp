@@ -137,19 +137,19 @@
             <div style="padding: 20px;">
                 <form class="layui-form" action="http://localhost:8080/System_war_exploded/daKaServlet" method="post">
                     <input type="hidden" name="action" value="update">
-                    <input type="hidden" name="id" value="${recordId}">
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">日期</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="date" required lay-verify="required" placeholder="请输入日期" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">时间</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="time" required lay-verify="required" placeholder="请输入时间" class="layui-input">
-                        </div>
-                    </div>
+                    <input type="hidden" name="id" value="">
+<!--                    <div class="layui-form-item">-->
+<!--                        <label class="layui-form-label">日期</label>-->
+<!--                        <div class="layui-input-block">-->
+<!--                            <input type="text" name="date" required lay-verify="required" placeholder="请输入日期" class="layui-input">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="layui-form-item">-->
+<!--                        <label class="layui-form-label">时间</label>-->
+<!--                        <div class="layui-input-block">-->
+<!--                            <input type="text" name="time" required lay-verify="required" placeholder="请输入时间" class="layui-input">-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="layui-form-item">
                         <label class="layui-form-label">假条</label>
                         <div class="layui-input-block">

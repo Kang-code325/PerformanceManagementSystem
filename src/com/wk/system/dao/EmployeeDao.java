@@ -81,8 +81,8 @@ public class EmployeeDao {
 
     // 更新员工
     public static void updateEmployee(Employee employee) {
-        String sql = "UPDATE employee SET name = ?, password = ?, dep = ?, job = ? WHERE employee_id = ?";
-        Object[] params = { employee.getName(), employee.getPassword(), employee.getDep(), employee.getJob(), employee.getEmployee_id() };
+        String sql = "UPDATE employee SET employee_id=?, name = ?, password = ?, dep = ?, job = ? WHERE id = ?";
+        Object[] params = { employee.getEmployee_id(),employee.getName(), employee.getPassword(), employee.getDep(), employee.getJob(), employee.getId() };
 
         try {
             queryRunner.update(sql, params);
@@ -113,14 +113,9 @@ public class EmployeeDao {
 //    }
 
     // 根据ID查询单个员工
-    public static Employee getEmployeeById(String employeeId) {
-        String sql = "SELECT * FROM employee WHERE employee_id = ?";
-        try {
-            return queryRunner.query(sql, new BeanHandler<>(Employee.class), employeeId);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public static Employee getEmployeeById(String id) throws SQLException {
+        String sql = "SELECT * FROM employee WHERE id = ?";
+        return queryRunner.query(sql, new BeanHandler<>(Employee.class), id);
     }
 
 

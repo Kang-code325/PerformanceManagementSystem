@@ -269,60 +269,65 @@
         });
     }
 
-    // 编辑员工功能
+    <%--// 编辑员工功能--%>
+    <%--function editEmployee(employeeId) {--%>
+    <%--    // 这里可以通过 AJAX 请求获取员工信息，并填充到表单中--%>
+    <%--    console.log("Editing employee with ID: ", employeeId);--%>
+    <%--    layer.open({--%>
+    <%--        type: 1,--%>
+    <%--        title: '编辑员工',--%>
+    <%--        area: ['500px', '400px'],--%>
+    <%--        content: `--%>
+    <%--  <div style="padding: 20px;">--%>
+    <%--    <form class="layui-form" action="http://localhost:8080/System_war_exploded/employeeServlet?id=${adminId}" method="post">--%>
+    <%--        <input type="hidden" name="action" value="update">--%>
+    <%--      &lt;%&ndash;<input type="hidden" name="id" value="${employeeId}"> <!-- 添加员工ID -->&ndash;%&gt;--%>
+    <%--      <div class="layui-form-item">--%>
+    <%--        <label class="layui-form-label">姓名</label>--%>
+    <%--        <div class="layui-input-block">--%>
+    <%--          <input type="text" name="name" required lay-verify="required" placeholder="请输入姓名" class="layui-input">--%>
+    <%--        </div>--%>
+    <%--      </div>--%>
+    <%--      <div class="layui-form-item">--%>
+    <%--        <label class="layui-form-label">工号</label>--%>
+    <%--        <div class="layui-input-block">--%>
+    <%--          <input type="text" name="employee_id" required lay-verify="required" placeholder="请输入工号" class="layui-input">--%>
+    <%--        </div>--%>
+    <%--      </div>--%>
+    <%--      <div class="layui-form-item">--%>
+    <%--        <label class="layui-form-label">密码</label>--%>
+    <%--        <div class="layui-input-block">--%>
+    <%--          <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" class="layui-input">--%>
+    <%--        </div>--%>
+    <%--      </div>--%>
+    <%--      <div class="layui-form-item">--%>
+    <%--        <label class="layui-form-label">部门</label>--%>
+    <%--        <div class="layui-input-block">--%>
+    <%--          <input type="text" name="dep" required lay-verify="required" placeholder="请输入部门" class="layui-input">--%>
+    <%--        </div>--%>
+    <%--      </div>--%>
+    <%--      <div class="layui-form-item">--%>
+    <%--        <label class="layui-form-label">职位</label>--%>
+    <%--        <div class="layui-input-block">--%>
+    <%--          <input type="text" name="job" required lay-verify="required" placeholder="请输入职位" class="layui-input">--%>
+    <%--        </div>--%>
+    <%--      </div>--%>
+    <%--      <div class="layui-form-item">--%>
+    <%--        <div class="layui-input-block">--%>
+    <%--          <button type="submit" class="layui-btn">提交</button>--%>
+    <%--          <button type="reset" class="layui-btn layui-btn-primary">重置</button>--%>
+    <%--        </div>--%>
+    <%--      </div>--%>
+    <%--    </form>--%>
+    <%--  </div>--%>
+    <%--`--%>
+    <%--    });--%>
+    <%--}--%>
+
     function editEmployee(employeeId) {
-        // 这里可以通过 AJAX 请求获取员工信息，并填充到表单中
-        console.log("Editing employee with ID: ", employeeId);
-        layer.open({
-            type: 1,
-            title: '编辑员工',
-            area: ['500px', '400px'],
-            content: `
-      <div style="padding: 20px;">
-        <form class="layui-form" action="http://localhost:8080/System_war_exploded/employeeServlet?id=${adminId}" method="post">
-            <input type="hidden" name="action" value="update">
-          <%--<input type="hidden" name="id" value="${employeeId}"> <!-- 添加员工ID -->--%>
-          <div class="layui-form-item">
-            <label class="layui-form-label">姓名</label>
-            <div class="layui-input-block">
-              <input type="text" name="name" required lay-verify="required" placeholder="请输入姓名" class="layui-input">
-            </div>
-          </div>
-          <div class="layui-form-item">
-            <label class="layui-form-label">工号</label>
-            <div class="layui-input-block">
-              <input type="text" name="employee_id" required lay-verify="required" placeholder="请输入工号" class="layui-input">
-            </div>
-          </div>
-          <div class="layui-form-item">
-            <label class="layui-form-label">密码</label>
-            <div class="layui-input-block">
-              <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" class="layui-input">
-            </div>
-          </div>
-          <div class="layui-form-item">
-            <label class="layui-form-label">部门</label>
-            <div class="layui-input-block">
-              <input type="text" name="dep" required lay-verify="required" placeholder="请输入部门" class="layui-input">
-            </div>
-          </div>
-          <div class="layui-form-item">
-            <label class="layui-form-label">职位</label>
-            <div class="layui-input-block">
-              <input type="text" name="job" required lay-verify="required" placeholder="请输入职位" class="layui-input">
-            </div>
-          </div>
-          <div class="layui-form-item">
-            <div class="layui-input-block">
-              <button type="submit" class="layui-btn">提交</button>
-              <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    `
-        });
+        window.location.href = `http://localhost:8080/System_war_exploded/updateEmployeeServlet?action=edit&id=`+employeeId;
     }
+
 
     <%--// 删除员工功能--%>
     <%--function deleteEmployee(employeeId) {--%>
