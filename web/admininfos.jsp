@@ -325,45 +325,55 @@
     });
   }
 
-  // 编辑管理员功能
+  <%--function editAdmin(adminId) {--%>
+  <%--  layer.open({--%>
+  <%--    type: 1,--%>
+  <%--    title: '编辑管理员',--%>
+  <%--    area: ['500px', '400px'],--%>
+  <%--    content: `--%>
+  <%--      <div style="padding: 20px;">--%>
+  <%--          <form id="editForm" class="layui-form" method="get">--%>
+  <%--              <div class="layui-form-item">--%>
+  <%--                  <label class="layui-form-label">工号</label>--%>
+  <%--                  <div class="layui-input-block">--%>
+  <%--                      <input type="text" name="specialist_id" required lay-verify="required" placeholder="请输入工号" class="layui-input">--%>
+  <%--                  </div>--%>
+  <%--              </div>--%>
+  <%--              <div class="layui-form-item">--%>
+  <%--                  <label class="layui-form-label">姓名</label>--%>
+  <%--                  <div class="layui-input-block">--%>
+  <%--                      <input type="text" name="name" required lay-verify="required" placeholder="请输入姓名" class="layui-input">--%>
+  <%--                  </div>--%>
+  <%--              </div>--%>
+  <%--              <div class="layui-form-item">--%>
+  <%--                  <label class="layui-form-label">密码</label>--%>
+  <%--                  <div class="layui-input-block">--%>
+  <%--                      <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" class="layui-input">--%>
+  <%--                  </div>--%>
+  <%--              </div>--%>
+  <%--              <div class="layui-form-item">--%>
+  <%--                  <div class="layui-input-block">--%>
+  <%--                      <!-- 传递adminId作为参数 -->--%>
+  <%--                      <button type="button" class="layui-btn" onclick="submitForm(${adminId})">提交</button>--%>
+  <%--                      <button type="reset" class="layui-btn layui-btn-primary">重置</button>--%>
+  <%--                  </div>--%>
+  <%--              </div>--%>
+  <%--          </form>--%>
+  <%--      </div>--%>
+  <%--      `--%>
+  <%--  });--%>
+  <%--}--%>
+
+  <%--function submitForm(adminId) {--%>
+  <%--  var form = document.getElementById("editForm");--%>
+  <%--  form.action = `http://localhost:8080/System_war_exploded/personnelSpecialistServlet?action=update&id=${adminId}`; // 将 adminId 动态添加到 URL--%>
+  <%--  form.submit();--%>
+  <%--}--%>
+
+
+
   function editAdmin(adminId) {
-    layer.open({
-      type: 1,
-      title: '编辑管理员',
-      area: ['500px', '400px'],
-      content: `
-      <div style="padding: 20px;">
-        <form class="layui-form" action="http://localhost:8080/System_war_exploded/adminServlet" method="post">
-            <input type="hidden" name="action" value="update">
-            <input type="hidden" name="id" value="${adminId}"> <!-- 管理员ID -->
-          <div class="layui-form-item">
-            <label class="layui-form-label">工号</label>
-            <div class="layui-input-block">
-              <input type="text" name="specialist_id" required lay-verify="required" placeholder="请输入工号" class="layui-input">
-            </div>
-          </div>
-          <div class="layui-form-item">
-            <label class="layui-form-label">姓名</label>
-            <div class="layui-input-block">
-              <input type="text" name="name" required lay-verify="required" placeholder="请输入姓名" class="layui-input">
-            </div>
-          </div>
-          <div class="layui-form-item">
-            <label class="layui-form-label">密码</label>
-            <div class="layui-input-block">
-              <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" class="layui-input">
-            </div>
-          </div>
-          <div class="layui-form-item">
-            <div class="layui-input-block">
-              <button type="submit" class="layui-btn">提交</button>
-              <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    `
-    });
+
   }
 
   // 删除管理员功能
