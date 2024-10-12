@@ -291,4 +291,15 @@
         <url-pattern>/adminAddPerfoServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>UpdatePersonnelSpecialistServlet</servlet-name>
+        <servlet-class>com.wk.system.web.servlet.UpdatePersonnelSpecialistServlet</servlet-class> <!-- 这里是你的Servlet类的全路径 -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdatePersonnelSpecialistServlet</servlet-name>
+        <url-pattern>/updatePersonnelSpecialistServlet</url-pattern> <!-- 这里是你要映射的路径，例如 /employee -->
+    </servlet-mapping>
+
 </web-app>

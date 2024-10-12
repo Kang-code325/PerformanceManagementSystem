@@ -373,8 +373,9 @@
 
 
   function editAdmin(adminId) {
-
+    window.location.href = `http://localhost:8080/System_war_exploded/updatePersonnelSpecialistServlet?action=edit&id=`+adminId;
   }
+
 
   // 删除管理员功能
   function deleteAdmin(adminId) {

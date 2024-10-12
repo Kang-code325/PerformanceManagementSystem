@@ -72,5 +72,9 @@ public class PersonnelSpecialistService {
         personnelSpecialistDao.deletePersonnelSpecialist(id);
     }
 
+    public PersonnelSpecialist getOnePersonnelSpecialist(String id) throws  SQLException{
+        PersonnelSpecialistDao personnelSpecialistDao=new PersonnelSpecialistDao();
+        return personnelSpecialistDao.getOnePersonnelSpecialist(id);
+    }
 
 }
