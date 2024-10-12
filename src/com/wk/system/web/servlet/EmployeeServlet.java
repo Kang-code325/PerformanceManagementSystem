@@ -67,7 +67,7 @@ public class EmployeeServlet extends HttpServlet {
 
     // 更新员工方法
     private void updateEmployee(HttpServletRequest request, HttpServletResponse response) throws IOException {
-//        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String employeeId = request.getParameter("employee_id");
         String password = request.getParameter("password");
@@ -75,7 +75,7 @@ public class EmployeeServlet extends HttpServlet {
         String job = request.getParameter("job");
 
         // 创建员工对象
-        Employee employee = new Employee( employeeId,  name,password, dep, job);
+        Employee employee = new Employee( id,employeeId,  name,password, dep, job);
 
         // 调用Service层方法
         employeeService.updateEmployee(employee);
