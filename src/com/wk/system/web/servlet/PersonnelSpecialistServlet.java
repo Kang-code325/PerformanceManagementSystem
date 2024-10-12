@@ -29,8 +29,6 @@ public class PersonnelSpecialistServlet extends HttpServlet {
 
         if ("add".equals(action)) {
             addPersonnelSpecialist(request, response);
-        } else if ("update".equals(action)) {
-            updatePersonnelSpecialist(request, response);
         }
     }
 
@@ -42,6 +40,8 @@ public class PersonnelSpecialistServlet extends HttpServlet {
 
         if ("delete".equals(action)) {
             deletePersonnelSpecialist(request, response);
+        }else if ("update".equals(action)) {
+            updatePersonnelSpecialist(request, response);
         }
     }
 
@@ -67,6 +67,7 @@ public class PersonnelSpecialistServlet extends HttpServlet {
     // 更新专员方法
     private void updatePersonnelSpecialist(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int id = Integer.parseInt(request.getParameter("id"));
+        System.out.println("789"+id);
         String specialistId = request.getParameter("specialist_id");
         String name = request.getParameter("name");
         String password = request.getParameter("password");

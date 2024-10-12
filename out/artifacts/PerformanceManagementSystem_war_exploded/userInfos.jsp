@@ -272,15 +272,16 @@
     // 编辑员工功能
     function editEmployee(employeeId) {
         // 这里可以通过 AJAX 请求获取员工信息，并填充到表单中
+        console.log("Editing employee with ID: ", employeeId);
         layer.open({
             type: 1,
             title: '编辑员工',
             area: ['500px', '400px'],
             content: `
       <div style="padding: 20px;">
-        <form class="layui-form" action="http://localhost:8080/System_war_exploded/employeeServlet" method="post">
+        <form class="layui-form" action="http://localhost:8080/System_war_exploded/employeeServlet?id=${adminId}" method="post">
             <input type="hidden" name="action" value="update">
-          <input type="hidden" name="id" value="${employeeId}"> <!-- 添加员工ID -->
+          <%--<input type="hidden" name="id" value="${employeeId}"> <!-- 添加员工ID -->--%>
           <div class="layui-form-item">
             <label class="layui-form-label">姓名</label>
             <div class="layui-input-block">
